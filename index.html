@@ -183,7 +183,7 @@
           var message = document.getElementById("pesan").value;
 
           // Format pesan yang akan dikirim ke WhatsApp
-          var whatsappMessage = "Nama : " + name + "%0a" + "Email : " + email + "%0a" + "Pesan : " + message;
+          var whatsappMessage = "Nama : " + name + "%0a" + "Email : " + email + "%0a" + message;
 
           // Bentuk URL WhatsApp dengan nomor telepon dan pesan
           var whatsappURL = "https://wa.me/62895330276500/?text=" + encodeURIComponent(whatsappMessage);
