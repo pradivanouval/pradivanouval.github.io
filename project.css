@@ -1,0 +1,16 @@
+.jumbotron {
+  padding-top: 3rem;
+  background-color: #d6dfe6;
+}
+
+#project {
+  background-color: #d6dfe6;
+}
+
+#contact {
+  background-color: white;
+}
+
+.card:hover {
+  background-color: rgb(67, 72, 172);
+}
