@@ -182,14 +182,20 @@
           var email = document.getElementById("exampleInputEmail1").value;
           var message = document.getElementById("pesan").value;
 
-          // Format pesan yang akan dikirim ke WhatsApp
-          var whatsappMessage = "Nama: *" + name + "*%0A" + "Email: *" + email + "*%0A" + "Pesan: " + message;
+          // Format pesan untuk WhatsApp
+          var whatsappMessage =
+            "https://api.whatsapp.com/send?phone=62895330276500&text=Halo%2C%20Pradiva%20Nouval.%20Perkenalkan%20saya%20%3A%0A" +
+            "Nama%20%3A%20" +
+            encodeURIComponent(name) +
+            "%0A" +
+            "Email%20%3A%20" +
+            encodeURIComponent(email) +
+            "%0A" +
+            "Pesan%20%3A%20" +
+            encodeURIComponent(message);
 
-          // Bentuk URL WhatsApp dengan nomor telepon dan pesan
-          var whatsappURL = "https://api.whatsapp.com/send?phone=62895330276500&text=Halo%2C%20Pradiva%20Nouval.%20Perkenalkan%20saya%20%3A%0ANama%20%3A%20*" + name + "*%0AEmail%20%3A%20*" + email + "*%0A" + message";
-
-          // Arahkan pengguna ke URL WhatsApp
-          window.location.href = whatsappURL;
+          // Redirect pengguna ke URL WhatsApp
+          window.location.href = whatsappMessage;
         });
       });
     </script>
